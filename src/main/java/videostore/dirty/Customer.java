@@ -1,5 +1,4 @@
 package videostore.dirty;
-import java.util.Enumeration;
 import java.util.Vector;
 
 class Customer {
@@ -21,7 +20,7 @@ class Customer {
 	public String statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
-		String result = "Rental Record for " + getName() + "\n";
+		String result = "Rental Record for " + _name + "\n";
 
 		for(Rental rental:this.rentals) {
 			double price = getPrice(rental);
