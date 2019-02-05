@@ -27,9 +27,10 @@ class Customer {
 			// add frequent renter points
 			frequentRenterPoints++;
 			// add bonus for a two day new release rental
-			if ((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE)
-					&& rental.getDaysRented() > 1)
+			boolean isNewRelease = rental.isNewRelease();
+			if (isNewRelease && rental.getDaysRented() > 1) {
 				frequentRenterPoints++;
+			}
 
 			result += getStatementLine(rental, price);
 
@@ -46,7 +47,7 @@ class Customer {
 		return "\t" + rental.getMovie().getTitle() + "\t"
 				+ String.valueOf(price) + "\n";
 	}
-
+	
 	private double getPrice(Rental rental) {
 		double price = 0;
 		// determine amounts for each line

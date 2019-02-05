@@ -15,4 +15,10 @@ class Rental {
 	public Movie getMovie() {
 		return _movie;
 	}
+
+	public boolean isNewRelease() {
+		return getMovie().getPriceCode() == Movie.NEW_RELEASE;
+	}
+
+	
 }
