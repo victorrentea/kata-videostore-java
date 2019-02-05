@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c59b74e6-24e5-4a06-a78e-0b4b4f8ac11e" name="Default" comment="Inline getter call">
+    <list default="true" id="c59b74e6-24e5-4a06-a78e-0b4b4f8ac11e" name="Default" comment="Se muta metoda intr-o clasa ale carei campuri sunt folosite in acea metoda.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/videostore/dirty/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/videostore/dirty/Rental.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,32 +56,50 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="63" />
-          <entry key="java" value="225" />
-          <entry key="txt" value="175" />
+          <entry key="dummy" value="118" />
+          <entry key="java" value="447" />
+          <entry key="txt" value="295" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="225" />
-          <entry key="PLAIN_TEXT" value="238" />
+          <entry key="JAVA" value="447" />
+          <entry key="PLAIN_TEXT" value="413" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="574">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#319#320#0" expanded="true" />
                 <element signature="e#338#339#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1167#1168#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/videostore/dirty/CustomerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -94,14 +113,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="274">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#268#269#0" expanded="true" />
                 <element signature="e#288#289#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,8 +164,8 @@
         <option value="$PROJECT_DIR$/src/test/java/videostore/dirty/CustomerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/videostore/dirty/StatementFormatterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/videostore/dirty/StatementFormater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java" />
         <option value="$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java" />
       </list>
     </option>
   </component>
@@ -274,7 +295,7 @@
     <property name="SearchEverywhereHistoryKey" value="increase&#9;ACTION&#9;EditorIncreaseFontSize" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549373854401" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549374531043" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/videostore/dirty" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -483,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549373293208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se muta metoda intr-o clasa ale carei campuri sunt folosite in acea metoda.">
+      <created>1549373905446</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1549373905446</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -565,7 +593,8 @@
     <MESSAGE value="inlocuiesc iterarea cu enumeration cu for each" />
     <MESSAGE value="extract getPrice si getStatementLine" />
     <MESSAGE value="Inline getter call" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inline getter call" />
+    <MESSAGE value="Se muta metoda intr-o clasa ale carei campuri sunt folosite in acea metoda." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se muta metoda intr-o clasa ale carei campuri sunt folosite in acea metoda." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/StatementGenerator.java" />
@@ -588,6 +617,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/videostore/dirty/StatementFormatterTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/StatementFormater.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/videostore/dirty/CustomerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -595,26 +631,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="574">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="274">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
           </folding>
         </state>
       </provider>

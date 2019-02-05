@@ -23,7 +23,7 @@ class Customer {
 		String result = "Rental Record for " + _name + "\n";
 
 		for(Rental rental:this.rentals) {
-			double price = getPrice(rental);
+			double price = rental.getPrice();
 			// add frequent renter points
 			frequentRenterPoints++;
 			// add bonus for a two day new release rental
@@ -36,36 +36,34 @@ class Customer {
 
 			totalAmount += price;
 		}
-		// add footer lines
-		result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
-		result += "You earned " + String.valueOf(frequentRenterPoints)
-				+ " frequent renter points";
+
+		result += createFooterLines(totalAmount, frequentRenterPoints);
+
 		return result;
+	}
+
+//	{
+//		List<String> errorListToAddTo = new ArrayList<>();
+//
+//		errorListToAddTo.addAll(oMetoda(new Object()));
+//	}
+//	private List<String> oMetoda(Object deValidat) {
+//		List<String> errorListToAddTo = new ArrayList<>();
+//		if (caz nashpa) {
+//			errorListToAddTo.add("Nashpa");
+//		}
+//		return errorListToAddTo;
+//	}
+
+	private String createFooterLines(double totalAmount, int frequentRenterPoints) {
+		return "Amount owed is " + totalAmount + "\n" +
+				"You earned " + String.valueOf(frequentRenterPoints)
+				+ " frequent renter points";
 	}
 
 	private String getStatementLine(Rental rental, double price) {
 		return "\t" + rental.getMovie().getTitle() + "\t"
 				+ String.valueOf(price) + "\n";
 	}
-	
-	private double getPrice(Rental rental) {
-		double price = 0;
-		// determine amounts for each line
-		switch (rental.getMovie().getPriceCode()) {
-		case Movie.REGULAR:
-			price += 2;
-			if (rental.getDaysRented() > 2)
-				price += (rental.getDaysRented() - 2) * 1.5;
-			break;
-		case Movie.NEW_RELEASE:
-			price += rental.getDaysRented() * 3;
-			break;
-		case Movie.CHILDRENS:
-			price += 1.5;
-			if (rental.getDaysRented() > 3)
-				price += (rental.getDaysRented() - 3) * 1.5;
-			break;
-		}
-		return price;
-	}
+
 }
