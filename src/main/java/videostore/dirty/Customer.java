@@ -24,16 +24,8 @@ class Customer {
 
 		for(Rental rental:this.rentals) {
 			double price = rental.getPrice();
-			// add frequent renter points
-			frequentRenterPoints++;
-			// add bonus for a two day new release rental
-			boolean isNewRelease = rental.isNewRelease();
-			if (isNewRelease && rental.getDaysRented() > 1) {
-				frequentRenterPoints++;
-			}
-
+			frequentRenterPoints += rental.getDeltaPoints();
 			result += getStatementLine(rental, price);
-
 			totalAmount += price;
 		}
 
@@ -42,7 +34,7 @@ class Customer {
 		return result;
 	}
 
-//	{
+	//	{
 //		List<String> errorListToAddTo = new ArrayList<>();
 //
 //		errorListToAddTo.addAll(oMetoda(new Object()));
