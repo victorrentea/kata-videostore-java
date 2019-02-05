@@ -3,11 +3,11 @@ public class Movie {
 	public static final int CHILDRENS = 2;
 	public static final int REGULAR = 0;
 	public static final int NEW_RELEASE = 1;
-	private String _title;
+	private String title;
 	private int _priceCode;
 
 	public Movie(String title, int priceCode) {
-		_title = title;
+		this.setTitle(title);
 		_priceCode = priceCode;
 	}
 
@@ -20,6 +20,10 @@ public class Movie {
 	}
 
 	public String getTitle() {
-		return _title;
-	};
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
 }

@@ -1,15 +1,18 @@
 package videostore.dirty;
+import java.util.Comparator;
 import java.util.Vector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class Customer {
 	private String _name;
-	private Vector<Rental> rentals = new Vector<>();
+	private Vector<IRental> rentals = new Vector<>();
 
 	public Customer(String name) {
 		_name = name;
 	};
 
-	public void addRental(Rental arg) {
+	public void addRental(IRental arg) {
 		rentals.addElement(arg);
 	}
 
@@ -18,20 +21,55 @@ class Customer {
 	}
 
 	public String statement() {
-		double totalAmount = 0;
-		int frequentRenterPoints = 0;
-		String result = "Rental Record for " + _name + "\n";
+		int frequentRenterPoints = rentals.stream().mapToInt(IRental::getDeltaPoints).sum();
 
-		for(Rental rental:this.rentals) {
-			double price = rental.getPrice();
-			frequentRenterPoints += rental.getDeltaPoints();
-			result += getStatementLine(rental, price);
-			totalAmount += price;
-		}
+		double totalPrice = rentals.stream().mapToDouble(IRental::getPrice).sum();
 
-		result += createFooterLines(totalAmount, frequentRenterPoints);
 
-		return result;
+		String statementStr = createHeader();
+		statementStr += createBody();
+		statementStr += createFooter(totalPrice, frequentRenterPoints);
+		return statementStr;
+	}
+
+	public String statementCuCr323() {
+		String rez = statement();
+//		for () // chestii in plus
+		return rez;
+	}
+
+	private String createBody() {
+		return rentals.stream().map(this::getStatementStr).collect(Collectors.joining());
+	}
+
+	private String createHeader() {
+		return "Rental Record for " + _name + "\n";
+	}
+
+	private String getStatementStr(IRental rental) {
+		return "\t" + rental.getMovie().getTitle() + "\t"
+					+ String.valueOf(rental.getPrice()) + "\n";
+	}
+
+	//			// aici vrei sa faci ceva altfel pentru UC 322
+//			if (cr323) {
+//				// si altceva
+//			}
+	{
+
+		Stream.of(1,2,3,4,5,6,7,8)
+				.sorted(new Comparator<Integer>() {
+					@Override
+					public int compare(Integer o1, Integer o2) {
+						return o2-o1;
+					}
+				});
+		String s = createFooter(0, 0);
+	}
+
+	private String createFooter(double price, int points) {
+		return "Amount owed is " + price + "\n" +
+				"You earned " + points + " frequent renter points";
 	}
 
 	//	{
@@ -46,16 +84,5 @@ class Customer {
 //		}
 //		return errorListToAddTo;
 //	}
-
-	private String createFooterLines(double totalAmount, int frequentRenterPoints) {
-		return "Amount owed is " + totalAmount + "\n" +
-				"You earned " + String.valueOf(frequentRenterPoints)
-				+ " frequent renter points";
-	}
-
-	private String getStatementLine(Rental rental, double price) {
-		return "\t" + rental.getMovie().getTitle() + "\t"
-				+ String.valueOf(price) + "\n";
-	}
 
 }

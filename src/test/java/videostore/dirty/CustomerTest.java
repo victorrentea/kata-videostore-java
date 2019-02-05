@@ -21,5 +21,8 @@ public class CustomerTest {
                 + "You earned 4 frequent renter points";
         
         Assert.assertEquals(expected, customer.statement());
+
+        // acum fa altfel treava
+        Assert.assertEquals(expected, customer.statementCuCr323());
     }
 }

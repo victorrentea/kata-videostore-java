@@ -1,5 +1,5 @@
 package videostore.dirty;
-class Rental {
+class Rental implements IRental {
 	private Movie movie;
 	private int daysRented;
 
@@ -8,18 +8,22 @@ class Rental {
 		this.daysRented = daysRented;
 	}
 
+	@Override
 	public int getDaysRented() {
 		return daysRented;
 	}
 
+	@Override
 	public Movie getMovie() {
 		return movie;
 	}
 
+	@Override
 	public boolean isNewRelease() {
 		return movie.getPriceCode() == Movie.NEW_RELEASE;
 	}
 
+	@Override
 	public double getPrice() {
 		double price = 0;
 		switch (getMovie().getPriceCode()) {
@@ -40,6 +44,7 @@ class Rental {
 		return price;
 	}
 
+	@Override
 	public int getDeltaPoints() {
 		int deltaPoints = 1;
 
