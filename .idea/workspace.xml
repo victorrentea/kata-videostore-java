@@ -2,35 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c59b74e6-24e5-4a06-a78e-0b4b4f8ac11e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../jpa2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa2/src/main/java/ro/victor/training/jpa2/Jpa2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa2/src/main/java/ro/victor/training/jpa2/Jpa2Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa2/src/main/java/ro/victor/training/jpa2/VoxxedDaysPlayground.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa2/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-gilded-rose-java/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kata-gilded-rose-java/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-gilded-rose-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kata-gilded-rose-java/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-gilded-rose-java/kata-gilded-rose.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../kata-gilded-rose-java/kata-gilded-rose.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-gilded-rose-java/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kata-gilded-rose-java/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-gilded-rose-java/src/main/java/com/gildedrose/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kata-gilded-rose-java/src/main/java/com/gildedrose/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-gilded-rose-java/src/main/java/com/gildedrose/TexttestFixture.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kata-gilded-rose-java/src/main/java/com/gildedrose/TexttestFixture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-parking-java.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kata-trivia-java.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../performance/src/main/java/victor/perf/leaks/CachingMethodObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../performance/src/main/java/victor/perf/leaks/CachingMethodObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../performance/src/main/java/victor/perf/leaks/Leak1Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../performance/src/main/java/victor/perf/leaks/Leak1Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../performance/src/main/java/victor/perf/stock/StockResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../performance/src/main/java/victor/perf/stock/StockResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../talk/functional-patterns-devoxx-uk/src/main/snippet/B__Stream_Wrecks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../talk/functional-patterns-devoxx-uk/src/main/snippet/B__Stream_Wrecks.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../talk/functional-patterns-devoxx-uk/src/main/snippet/C__Optional_Slays_NPE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../talk/functional-patterns-devoxx-uk/src/main/snippet/C__Optional_Slays_NPE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../talk/functional-patterns-devoxx-uk/src/main/snippet/D2__Loan_Pattern.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../talk/functional-patterns-devoxx-uk/src/main/snippet/D2__Loan_Pattern.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../undoner/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../undoner/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../unit-testing/src/test/java/ro/victor/unittest/bdd/tennis/TennisScoreBehaviorSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unit-testing/src/test/java/ro/victor/unittest/bdd/tennis/TennisScoreBehaviorSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../unit-testing/src/test/java/ro/victor/unittest/mocks/telemetry/TelemetryDiagnosticControls.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unit-testing/src/test/java/ro/victor/unittest/mocks/telemetry/TelemetryDiagnosticControls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../unit-testing/src/test/java/ro/victor/unittest/parameterized/TestParametrizabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../unit-testing/src/test/java/ro/victor/unittest/parameterized/TestParametrizabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../unit-testing/src/test/resources/tennis-score.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../../unit-testing/src/test/resources/tennis-score.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../victorrentea.ro/feed/helper-linkedin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../victorrentea.ro/feed/helper-linkedin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../victorrentea.ro/feed/helper-twitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../victorrentea.ro/feed/helper-twitter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../victorrentea.ro/feed/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../victorrentea.ro/feed/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../victorrentea.ro/feed/twitter-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../victorrentea.ro/feed/twitter-data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../victorrentea.ro/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../victorrentea.ro/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../victorrentea.ro/vote.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/videostore/dirty/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/videostore/dirty/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/videostore/dirty/Rental.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/StatementFormater$A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/StatementFormater.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/videostore/dirty/StatementFormatterTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,23 +53,31 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1442880853">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="325">
+              <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -125,7 +114,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -236,6 +225,14 @@
               <item name="cleancode-videostore" type="b2602c69:ProjectViewProjectNode" />
               <item name="kata-videostore-java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dirty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleancode-videostore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kata-videostore-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,7 +262,7 @@
     <property name="SearchEverywhereHistoryKey" value="increase&#9;ACTION&#9;EditorIncreaseFontSize" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548946810956" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549372075814" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/videostore/dirty" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -485,6 +482,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20375" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -540,23 +538,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/videostore/dirty/StatementFormatterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/StatementFormater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/videostore/dirty/StatementFormatterTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/StatementFormater.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Rental.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -568,17 +551,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/videostore/dirty/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>
