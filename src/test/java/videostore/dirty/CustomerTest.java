@@ -3,6 +3,7 @@ package videostore.dirty;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -21,7 +22,7 @@ public class CustomerTest {
                 + "	Inception	6.5\n"
                 + "Amount owed is 32.0\n"
                 + "You earned 4 frequent renter points";
-        
-        assertEquals(expected, customer.statement());
+
+        assertThat(customer.statement()).isEqualToIgnoringNewLines(expected);
     }
 }
