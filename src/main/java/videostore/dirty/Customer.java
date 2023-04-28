@@ -1,88 +1,61 @@
 package videostore.dirty;
-import java.util.Comparator;
-import java.util.Vector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.*;
 
 class Customer {
-	private String _name;
-	private Vector<IRental> rentals = new Vector<>();
+	private String name;
+	private List rentals = new ArrayList();
 
 	public Customer(String name) {
-		_name = name;
+		this.name = name;
 	};
 
-	public void addRental(IRental arg) {
-		rentals.addElement(arg);
+	public void addRental(Rental arg) {
+		rentals.add(arg);
 	}
 
 	public String getName() {
-		return _name;
+		return name;
 	}
 
 	public String statement() {
-		int frequentRenterPoints = rentals.stream().mapToInt(IRental::getDeltaPoints).sum();
-
-		double totalPrice = rentals.stream().mapToDouble(IRental::getPrice).sum();
-
-
-		String statementStr = createHeader();
-		statementStr += createBody();
-		statementStr += createFooter(totalPrice, frequentRenterPoints);
-		return statementStr;
+		double totalAmount = 0;
+		int frequentRenterPoints = 0;
+		Iterator rentals = this.rentals.iterator();
+		String result = "Rental Record for " + getName() + "\n";
+		while (rentals.hasNext()) {
+			double thisAmount = 0;
+			Rental each = (Rental) rentals.next();
+			// determine amounts for each line
+			switch (each.getMovie().getPriceCode()) {
+			case Movie.CATEGORY_REGULAR:
+				thisAmount += 2;
+				if (each.getDaysRented() > 2)
+					thisAmount += (each.getDaysRented() - 2) * 1.5;
+				break;
+			case Movie.CATEGORY_NEW_RELEASE:
+				thisAmount += each.getDaysRented() * 3;
+				break;
+			case Movie.CATEGORY_CHILDRENS:
+				thisAmount += 1.5;
+				if (each.getDaysRented() > 3)
+					thisAmount += (each.getDaysRented() - 3) * 1.5;
+				break;
+			}
+			// add frequent renter points
+			frequentRenterPoints++;
+			// add bonus for a two day new release rental
+			if ((each.getMovie().getPriceCode() == Movie.CATEGORY_NEW_RELEASE)
+					&& each.getDaysRented() > 1)
+				frequentRenterPoints++;
+			// show figures for this rental
+			result += "\t" + each.getMovie().getTitle() + "\t"
+					+ thisAmount + "\n";
+			totalAmount += thisAmount;
+		}
+		// add footer lines
+		result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
+		result += "You earned " + String.valueOf(frequentRenterPoints)
+				+ " frequent renter points";
+		return result;
 	}
-
-	public String statementCuCr323() {
-		String rez = statement();
-//		for () // chestii in plus
-		return rez;
-	}
-
-	private String createBody() {
-		return rentals.stream().map(this::getStatementStr).collect(Collectors.joining());
-	}
-
-	private String createHeader() {
-		return "Rental Record for " + _name + "\n";
-	}
-
-	private String getStatementStr(IRental rental) {
-		return "\t" + rental.getMovie().getTitle() + "\t"
-					+ String.valueOf(rental.getPrice()) + "\n";
-	}
-
-	//			// aici vrei sa faci ceva altfel pentru UC 322
-//			if (cr323) {
-//				// si altceva
-//			}
-	{
-
-		Stream.of(1,2,3,4,5,6,7,8)
-				.sorted(new Comparator<Integer>() {
-					@Override
-					public int compare(Integer o1, Integer o2) {
-						return o2-o1;
-					}
-				});
-		String s = createFooter(0, 0);
-	}
-
-	private String createFooter(double price, int points) {
-		return "Amount owed is " + price + "\n" +
-				"You earned " + points + " frequent renter points";
-	}
-
-	//	{
-//		List<String> errorListToAddTo = new ArrayList<>();
-//
-//		errorListToAddTo.addAll(oMetoda(new Object()));
-//	}
-//	private List<String> oMetoda(Object deValidat) {
-//		List<String> errorListToAddTo = new ArrayList<>();
-//		if (caz nashpa) {
-//			errorListToAddTo.add("Nashpa");
-//		}
-//		return errorListToAddTo;
-//	}
-
 }

@@ -1,13 +1,13 @@
 package videostore.dirty;
 public class Movie {
-	public static final int CHILDRENS = 2;
-	public static final int REGULAR = 0;
-	public static final int NEW_RELEASE = 1;
-	private String title;
+	public static final int CATEGORY_CHILDRENS = 2;
+	public static final int CATEGORY_REGULAR = 0;
+	public static final int CATEGORY_NEW_RELEASE = 1;
+	private String _title;
 	private int _priceCode;
 
 	public Movie(String title, int priceCode) {
-		this.setTitle(title);
+		_title = title;
 		_priceCode = priceCode;
 	}
 
@@ -20,10 +20,6 @@ public class Movie {
 	}
 
 	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
+		return _title;
+	};
 }
