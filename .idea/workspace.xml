@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f03048d9-3f59-42ae-a40d-c05665ca6b75" name="Changes" comment="" />
+    <list default="true" id="f03048d9-3f59-42ae-a40d-c05665ca6b75" name="Changes" comment="yolo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +68,16 @@
       <option name="presentableId" value="Default" />
       <updated>1682685372271</updated>
       <workItem from="1682685373773" duration="352000" />
+      <workItem from="1684756065003" duration="643000" />
     </task>
+    <task id="LOCAL-00001" summary="yolo">
+      <created>1684756086082</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684756086082</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +86,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="yolo" />
+    <option name="LAST_COMMIT_MESSAGE" value="yolo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
