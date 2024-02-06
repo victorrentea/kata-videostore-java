@@ -22,35 +22,21 @@ class Customer {
 		int frequentRenterPoints = 0;
 		StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
 
-
-		for (Movie each : rentals.keySet()) {
-
+		for (Map.Entry<Movie, Integer> each: rentals.entrySet()) {
 			double thisAmount = 0;
 			// determine amounts for each line
-			int dr = rentals.get(each);
-			switch (each.priceCode()) {
-				case REGULAR:
-					thisAmount += 2;
-					if (dr > 2)
-						thisAmount += (dr - 2) * 1.5;
-					break;
-				case NEW_RELEASE:
-					thisAmount += dr * 3;
-					break;
-				case CHILDREN:
-					thisAmount += 1.5;
-					if (dr > 3)
-						thisAmount += (dr - 3) * 1.5;
-					break;
-			}
+			Movie movie = each.getKey();
+			Integer rentalsCount = each.getValue();
+			thisAmount = movie.calculateAmount(rentalsCount);
+
 			// add frequent renter points
 			frequentRenterPoints++;
 			// add bonus for a two day new release rental
-			if (each.priceCode() == MoviePriceCode.NEW_RELEASE && dr > 1) {
+			if (movie.getPriceCode() == MoviePriceCode.NEW_RELEASE && rentalsCount > 1) {
 				frequentRenterPoints++;
 			}
 			// show figures line for this rental
-			result.append("\t").append(each.title()).append("\t").append(thisAmount).append("\n");
+			result.append("\t").append(movie.getTitle()).append("\t").append(thisAmount).append("\n");
 			totalAmount += thisAmount;
 		}
 		// add footer lines

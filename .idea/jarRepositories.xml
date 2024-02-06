@@ -2,9 +2,44 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="local.repo" />
+      <option name="name" value="local.repo" />
+      <option name="url" value="C:\Users\mhope/.m2/repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="platform-utils" />
+      <option name="name" value="platform-utils" />
+      <option name="url" value="https://nice-devops-369498121101.d.codeartifact.us-west-2.amazonaws.com/maven/incontact-java/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="debop" />
+      <option name="name" value="debop" />
+      <option name="url" value="https://repository.mulesoft.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="saas-remote" />
+      <option name="name" value="saas-remote" />
+      <option name="url" value="http://192.168.244.83:8081/artifactory/wfo-saas-snapshot-local/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jsystem" />
+      <option name="name" value="jsystem" />
+      <option name="url" value="http://maven.top-q.co.il/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="http://192.168.244.83:8081/artifactory/wfo-saas/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="cxone-codeartifact" />
+      <option name="name" value="cxone-codeartifact" />
+      <option name="url" value="https://nice-devops-369498121101.d.codeartifact.us-west-2.amazonaws.com/maven/cxone-maven/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
