@@ -11,9 +11,12 @@ public class CustomerTest {
     @Test
     public void characterizationTest() {
         Customer customer = new Customer("John Doe");
-        customer.addRental(new Movie("Star Wars", MovieType.NEW_RELEASE), 6);
-        customer.addRental(new Movie("Sofia", MovieType.CHILDREN), 7);
-        customer.addRental(new Movie("Inception", MovieType.REGULAR), 5);
+        final Movie star_wars = new Movie("Star Wars", MovieType.NEW_RELEASE);
+        customer.addRental(new Rental(star_wars, 6));
+        final Movie sofia = new Movie("Sofia", MovieType.CHILDREN);
+        customer.addRental(new Rental(sofia, 7));
+        final Movie inception = new Movie("Inception", MovieType.REGULAR);
+        customer.addRental(new Rental(inception, 5));
         
         String expected = "Rental Record for John Doe\n"
                 + "	Star Wars	18.0\n"
