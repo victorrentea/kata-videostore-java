@@ -1,8 +1,8 @@
 package videostore.horror;
 
 public class ChildrenMovie extends Movie {
-    public ChildrenMovie(String title, MoviePriceCode priceCode) {
-        super(title, priceCode);
+    public ChildrenMovie(String title) {
+        super(title);
     }
 
     @Override

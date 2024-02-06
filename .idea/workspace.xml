@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f03048d9-3f59-42ae-a40d-c05665ca6b75" name="Changes" comment="yolo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/ChildrenMovie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/NewReleaseMovie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/RegularMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f03048d9-3f59-42ae-a40d-c05665ca6b75" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/ChildrenMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/ChildrenMovie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/NewReleaseMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/NewReleaseMovie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/RegularMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/RegularMovie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/videostore/horror/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/videostore/horror/CustomerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/videostore/dirty/Rental.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702399804927</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="did not break!!">
+      <option name="closed" value="true" />
+      <created>1707227860572</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707227860572</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +164,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="yolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="yolo" />
+    <MESSAGE value="did not break!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="did not break!!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

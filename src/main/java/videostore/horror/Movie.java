@@ -7,7 +7,9 @@ import lombok.Getter;
 @Getter
 public abstract class Movie {
     private final String title;
-    private final MoviePriceCode priceCode;
-
     public abstract double calculateAmount(Integer rentalsCount);
+
+    public int getFrequentRenterBonus(int rentalsCount) {
+        return 0;
+    };
 }

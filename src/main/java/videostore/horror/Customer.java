@@ -23,18 +23,16 @@ class Customer {
 		StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
 
 		for (Map.Entry<Movie, Integer> each: rentals.entrySet()) {
-			double thisAmount = 0;
-			// determine amounts for each line
+            // determine amounts for each line
 			Movie movie = each.getKey();
 			Integer rentalsCount = each.getValue();
-			thisAmount = movie.calculateAmount(rentalsCount);
+            double thisAmount = movie.calculateAmount(rentalsCount);
 
-			// add frequent renter points
+            // add frequent renter points
 			frequentRenterPoints++;
 			// add bonus for a two day new release rental
-			if (movie.getPriceCode() == MoviePriceCode.NEW_RELEASE && rentalsCount > 1) {
-				frequentRenterPoints++;
-			}
+			frequentRenterPoints += movie.getFrequentRenterBonus(rentalsCount);
+
 			// show figures line for this rental
 			result.append("\t").append(movie.getTitle()).append("\t").append(thisAmount).append("\n");
 			totalAmount += thisAmount;
