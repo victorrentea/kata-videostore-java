@@ -11,7 +11,6 @@ class Customer {
     private final String name;
     private final List<CustomerMovieRental> rentals = new ArrayList<>();
 
-
     public Customer(String name) {
         this.name = name;
     }
@@ -21,26 +20,32 @@ class Customer {
     }
 
     public String statement() {
-        return "Rental Record for " + name + "\n" + createStatementBody() + createStatementFooter();
+        return createStatementHeader() + createStatementBody() + createStatementFooter();
+    }
+
+    private String createStatementHeader() {
+        return "Rental Record for " + name + "\n";
     }
 
     private String createStatementFooter() {
-        double totalAmount = rentals.stream()
-                .mapToDouble(CustomerMovieRental::calculateAmount)
-                .sum();
+        return "Amount owed is " + calculateTotalAmount() + "\n" + "You earned " + calculateFrequentRenterPoints() + " frequent renter points";
+    }
 
-        int frequentRenterPoints = rentals.stream()
+    private int calculateFrequentRenterPoints() {
+        return rentals.stream()
                 .mapToInt(CustomerMovieRental::getFrequentRenterBonus)
                 .sum();
+    }
 
-        return "Amount owed is " + totalAmount + "\n" +
-                "You earned " + frequentRenterPoints + " frequent renter points";
+    private double calculateTotalAmount() {
+        return rentals.stream()
+                .mapToDouble(CustomerMovieRental::calculateAmount)
+                .sum();
     }
 
     private String createStatementBody() {
-        return rentals.stream().map(movieRental -> {
-            double thisAmount = movieRental.calculateAmount();
-            return "\t" + movieRental.movie().getTitle() + "\t" + thisAmount + "\n";
-        }).collect(Collectors.joining());
+        return rentals.stream()
+                .map(movieRental -> "\t" + movieRental.movie().getTitle() + "\t" + movieRental.calculateAmount() + "\n")
+                .collect(Collectors.joining());
     }
 }
