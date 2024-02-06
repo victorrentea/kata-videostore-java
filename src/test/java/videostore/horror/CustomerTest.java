@@ -6,14 +6,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class CustomerTest {
+class CustomerTest {
 
     @Test
     public void characterizationTest() {
         Customer customer = new Customer("John Doe");
-        customer.addRental(new Movie("Star Wars", Movie.NEW_RELEASE), 6);
-        customer.addRental(new Movie("Sofia", Movie.CHILDRENS), 7);
-        customer.addRental(new Movie("Inception", Movie.REGULAR), 5);
+        customer.addRental(new Movie("Star Wars", MovieCategory.NEW_RELEASE.getCode()), 6);
+        customer.addRental(new Movie("Sofia", MovieCategory.CHILDREN.getCode()), 7);
+        customer.addRental(new Movie("Inception", MovieCategory.REGULAR.getCode()), 5);
         
         String expected = "Rental Record for John Doe\n"
                 + "	Star Wars	18.0\n"
@@ -22,6 +22,6 @@ public class CustomerTest {
                 + "Amount owed is 32.0\n"
                 + "You earned 4 frequent renter points";
         
-        assertThat(customer.statement()).isEqualToIgnoringNewLines(expected);
+        assertThat(customer.generateRentalStatement()).isEqualToIgnoringNewLines(expected);
     }
 }
