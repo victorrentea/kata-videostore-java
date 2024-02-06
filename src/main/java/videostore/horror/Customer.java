@@ -10,37 +10,44 @@ class Customer {
 
 	public Customer(String name) {
 		this.name = name;
-	};
+	}
 
 	public void addRental(Movie movie, int rentalDays) {
 		rentals.put(movie, rentalDays);
 	}
 
 
-	public String statement() {
+	public StringBuilder statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
-		String result = "Rental Record for " + name + "\n";
+		StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
 
 
-		for (Movie each : rentals.keySet()) {
+		for (Movie movie : rentals.keySet()) {
 
 			// determine amounts for each line
-			int dr = rentals.get(each);
-			double thisAmount = each.movieType().executeAction(dr);
+			int rentalDays = rentals.get(movie);
+			double amountToPay = movie.movieType().calculatePayment(rentalDays);
 
-			// add frequent renter points
-			frequentRenterPoints++;
-			// add bonus for a two day new release rental
-			if (each.movieType() == NEW_RELEASE && dr > 1)
-				frequentRenterPoints++;
 			// show figures line for this rental
-			result += "\t" + each.title() + "\t" + thisAmount + "\n";
-			totalAmount += thisAmount;
+			result.append("\t").append(movie.title()).append("\t").append(amountToPay).append("\n");
+
+			totalAmount += amountToPay;
+
+			frequentRenterPoints += getFrequentRenterPoints(movie.movieType(), rentalDays);
 		}
 		// add footer lines
-		result += "Amount owed is " + totalAmount + "\n";
-		result += "You earned " + frequentRenterPoints + " frequent renter points";
+		result.append("Amount owed is ").append(totalAmount).append("\n");
+		result.append("You earned ").append(frequentRenterPoints).append(" frequent renter points");
 		return result;
 	}
+
+	private static int getFrequentRenterPoints(MovieType movieType, int rentalDays) {
+		boolean eligibleForBonus = movieType == NEW_RELEASE && rentalDays > 1;
+		if (eligibleForBonus) {
+			return 2;
+		}
+        return 1;
+    }
+
 }
