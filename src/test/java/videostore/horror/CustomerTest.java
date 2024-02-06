@@ -16,6 +16,7 @@ public class CustomerTest {
         customer.addRental(new Movie("Inception", Movie.REGULAR), 5);
         
         String expected = "Rental Record for John Doe\n"
+
                 + "	Star Wars	18.0\n"
                 + "	Sofia	7.5\n"
                 + "	Inception	6.5\n"
