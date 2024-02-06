@@ -3,6 +3,7 @@ package videostore.horror;
 import lombok.Getter;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 class Customer {
 	@Getter
@@ -13,30 +14,30 @@ class Customer {
 		this.name = name;
 	}
 
-	public void addRental(Movie m, int d) {
-		rentals.put(m, d);
+	public void addRental(Movie movie, int rentalDays) {
+		rentals.put(movie, rentalDays);
 	}
 
 	public String statement() {
-		double totalAmount = 0;
-		int frequentRenterPoints = 0;
+//		double totalAmount = 0;
+//		int frequentRenterPoints = 0;
 		StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
 
+		double totalAmount = rentals.entrySet().stream()
+				.mapToDouble(each -> each.getKey().calculateAmount(each.getValue()))
+				.sum();
+
+		int frequentRenterPoints = rentals.entrySet().stream()
+				.mapToInt(each -> each.getKey().getFrequentRenterBonus(each.getValue()))
+				.sum();
+
+
 		for (Map.Entry<Movie, Integer> each: rentals.entrySet()) {
-            // determine amounts for each line
 			Movie movie = each.getKey();
-			Integer rentalsCount = each.getValue();
-            double thisAmount = movie.calculateAmount(rentalsCount);
-
-            // add frequent renter points
-			frequentRenterPoints++;
-			// add bonus for a two day new release rental
-			frequentRenterPoints += movie.getFrequentRenterBonus(rentalsCount);
-
-			// show figures line for this rental
+            double thisAmount = movie.calculateAmount(each.getValue());
 			result.append("\t").append(movie.getTitle()).append("\t").append(thisAmount).append("\n");
-			totalAmount += thisAmount;
 		}
+
 		// add footer lines
 		result.append("Amount owed is ").append(totalAmount).append("\n");
 		result.append("You earned ").append(frequentRenterPoints).append(" frequent renter points");

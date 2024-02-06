@@ -11,10 +11,7 @@ public class NewReleaseMovie extends Movie {
     }
 
     @Override
-    public int getFrequentRenterBonus(int rentalsCount) {
-        if (rentalsCount > 1) {
-            return 1;
-        }
-        return 0;
+    public int getFrequentRenterBonus(int rentalDays) {
+        return (rentalDays > 1) ? 2 : 1;
     }
 }

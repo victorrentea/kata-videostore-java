@@ -9,7 +9,7 @@ public abstract class Movie {
     private final String title;
     public abstract double calculateAmount(Integer rentalsCount);
 
-    public int getFrequentRenterBonus(int rentalsCount) {
-        return 0;
-    };
+    public int getFrequentRenterBonus(int rentalDays) {
+        return 1;
+    }
 }
