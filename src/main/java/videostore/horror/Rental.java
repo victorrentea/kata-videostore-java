@@ -5,14 +5,14 @@ import lombok.Getter;
 public record Rental(@Getter Movie movie, @Getter int rentalDays) {
 
     public String getMovieTitle() {
-        return movie.getTitle();
+        return movie.title();
     }
 
     public double calculateAmount() {
-        return movie.getMovieType().calculateAmount(rentalDays);
+        return movie.movieType().calculateAmount(rentalDays);
     }
 
     public int calculateFrequentRenterPoints() {
-        return movie.getMovieType().calculateFrequentRenterPoints(rentalDays);
+        return movie.movieType().calculateFrequentRenterPoints(rentalDays);
     }
 }
