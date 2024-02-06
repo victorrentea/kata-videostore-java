@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CustomerTest {
 
     @Test
-    public void characterizationTest() {
+    void characterizationTest() {
         Customer customer = new Customer("John Doe");
         customer.addRental(new Movie("Star Wars", Category.NEW_RELEASE), 6);
         customer.addRental(new Movie("Sofia", Category.CHILDRENS), 7);
