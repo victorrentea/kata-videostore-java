@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 class Customer {
     @Getter
     private final String name;
-    private final List<CustomerMovieRental> rentals = new ArrayList<>(); // preserves order
+    private final List<CustomerMovieRental> rentals = new ArrayList<>();
 
 
     public Customer(String name) {
