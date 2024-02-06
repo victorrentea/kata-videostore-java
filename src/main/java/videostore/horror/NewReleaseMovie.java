@@ -6,8 +6,8 @@ public class NewReleaseMovie extends Movie {
     }
 
     @Override
-    public double calculateAmount(Integer rentalsCount) {
-        return rentalsCount * 3;
+    public double calculateAmount(int rentalsCount) {
+        return rentalsCount * 3d;
     }
 
     @Override

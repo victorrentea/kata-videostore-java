@@ -6,11 +6,11 @@ public class RegularMovie extends Movie {
     }
 
     @Override
-    public double calculateAmount(Integer rentalsCount) {
-        double sum = 2;
+    public double calculateAmount(int rentalsCount) {
+        double amount = 2;
         if (rentalsCount > 2) {
-            sum += (rentalsCount - 2) * 1.5;
+            amount += (rentalsCount - 2) * 1.5;
         }
-        return sum;
+        return amount;
     }
 }

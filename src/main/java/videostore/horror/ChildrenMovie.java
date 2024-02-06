@@ -6,11 +6,11 @@ public class ChildrenMovie extends Movie {
     }
 
     @Override
-    public double calculateAmount(Integer rentalsCount) {
-        double sum = 1.5;
+    public double calculateAmount(int rentalsCount) {
+        double amount = 1.5;
         if (rentalsCount > 3) {
-            sum += (rentalsCount - 3) * 1.5;
+            amount += (rentalsCount - 3) * 1.5;
         }
-        return sum;
+        return amount;
     }
 }
