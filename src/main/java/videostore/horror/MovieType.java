@@ -1,6 +1,7 @@
 package videostore.horror;
 
 enum MovieType {
+//    ELDERS,
     REGULAR {
         @Override
         public double calculateAmount(int rentalDays) {

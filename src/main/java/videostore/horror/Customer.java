@@ -19,9 +19,7 @@ class Customer {
 	}
 
 	public String statement() {
-		StringBuilder result = new StringBuilder("Rental Record for " + getCustomerName() + "\n");
-		result.append(RentalCalculator.generateRentalStatement(movieRentals));
-		return result.toString();
+    return StatementGenerator.generate(customerName, movieRentals);
 	}
 
 }
