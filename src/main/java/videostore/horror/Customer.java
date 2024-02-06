@@ -25,24 +25,10 @@ class Customer {
 
 		for (Movie each : rentals.keySet()) {
 
-			double thisAmount = 0;
 			// determine amounts for each line
 			int dr = rentals.get(each);
-			switch (each.movieType()) {
-				case REGULAR:
-					thisAmount += 2;
-					if (dr > 2)
-						thisAmount += (dr - 2) * 1.5;
-					break;
-				case NEW_RELEASE:
-					thisAmount += dr * 3;
-					break;
-				case CHILDRENS:
-					thisAmount += 1.5;
-					if (dr > 3)
-						thisAmount += (dr - 3) * 1.5;
-					break;
-			}
+			double thisAmount = each.movieType().executeAction(dr);
+
 			// add frequent renter points
 			frequentRenterPoints++;
 			// add bonus for a two day new release rental
