@@ -10,11 +10,11 @@ public class Rental {
     private final int days;
     private final int frequentPoints;
 
-    public Rental (Movie movie, int days) {
+    public Rental(Movie movie, int days) {
         this.movie = movie;
         this.days = days;
         this.price = calculatePrice(movie, days);
-        this.frequentPoints = calculateFrequentRenterPoints(movie, days);
+        this.frequentPoints = calculatePoints(movie, days);
     }
 
     static double calculatePrice(Movie movie, int daysRented) {
@@ -37,13 +37,10 @@ public class Rental {
         return thisAmount;
     }
 
-    private static int calculateFrequentRenterPoints(Movie movie, int daysRented) {
-        // add frequent renter points
-        int frequentRenterPoints = 0;
-        frequentRenterPoints++;
-        // add bonus for a two day new release rental
+    private static int calculatePoints(Movie movie, int daysRented) {
+
         if (movie.movieType() == MovieType.NEW_RELEASE && daysRented > 1)
-            frequentRenterPoints++;
-        return frequentRenterPoints;
+            return 2;
+        return 1;
     }
 }
