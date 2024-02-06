@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f03048d9-3f59-42ae-a40d-c05665ca6b75" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/CustomerMovieRental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/ChildrenMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/ChildrenMovie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/NewReleaseMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/NewReleaseMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/videostore/horror/RegularMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/videostore/horror/RegularMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/videostore/horror/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/videostore/horror/CustomerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +21,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
@@ -41,6 +41,9 @@
         <option name="downloadSourcesAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -77,7 +80,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "http.proxy",
+    "settings.editor.selected.configurable": "actions.on.save",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -159,6 +162,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />

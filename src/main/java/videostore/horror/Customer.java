@@ -2,45 +2,45 @@ package videostore.horror;
 
 import lombok.Getter;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 class Customer {
-	@Getter
-	private final String name;
-	private final Map<Movie, Integer> rentals = new LinkedHashMap<>(); // preserves order
-
-	public Customer(String name) {
-		this.name = name;
-	}
-
-	public void addRental(Movie movie, int rentalDays) {
-		rentals.put(movie, rentalDays);
-	}
-
-	public String statement() {
-//		double totalAmount = 0;
-//		int frequentRenterPoints = 0;
-		StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
-
-		double totalAmount = rentals.entrySet().stream()
-				.mapToDouble(each -> each.getKey().calculateAmount(each.getValue()))
-				.sum();
-
-		int frequentRenterPoints = rentals.entrySet().stream()
-				.mapToInt(each -> each.getKey().getFrequentRenterBonus(each.getValue()))
-				.sum();
+    @Getter
+    private final String name;
+    private final List<CustomerMovieRental> rentals = new ArrayList<>(); // preserves order
 
 
-		for (Map.Entry<Movie, Integer> each: rentals.entrySet()) {
-			Movie movie = each.getKey();
-            double thisAmount = movie.calculateAmount(each.getValue());
-			result.append("\t").append(movie.getTitle()).append("\t").append(thisAmount).append("\n");
-		}
+    public Customer(String name) {
+        this.name = name;
+    }
 
-		// add footer lines
-		result.append("Amount owed is ").append(totalAmount).append("\n");
-		result.append("You earned ").append(frequentRenterPoints).append(" frequent renter points");
-		return result.toString();
-	}
+    public void addRental(Movie movie, int rentalDays) {
+        rentals.add(new CustomerMovieRental(movie, rentalDays));
+    }
+
+    public String statement() {
+        return "Rental Record for " + name + "\n" + createStatementBody() + createStatementFooter();
+    }
+
+    private String createStatementFooter() {
+        double totalAmount = rentals.stream()
+                .mapToDouble(CustomerMovieRental::calculateAmount)
+                .sum();
+
+        int frequentRenterPoints = rentals.stream()
+                .mapToInt(CustomerMovieRental::getFrequentRenterBonus)
+                .sum();
+
+        return "Amount owed is " + totalAmount + "\n" +
+                "You earned " + frequentRenterPoints + " frequent renter points";
+    }
+
+    private String createStatementBody() {
+        return rentals.stream().map(movieRental -> {
+            double thisAmount = movieRental.calculateAmount();
+            return "\t" + movieRental.movie().getTitle() + "\t" + thisAmount + "\n";
+        }).collect(Collectors.joining());
+    }
 }
